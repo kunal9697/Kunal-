@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "MFD Automation",
+  "description": "Automating Using The Automation Tool",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*",
+    "https://*.aws.amazon.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+ "action": {
+  "default_popup": "popup.html"
+},
+  "icons": {
+    "128": "icon.png",
+    "48":"icon.png",
+    "16":"icon.png"
+  }
+}
